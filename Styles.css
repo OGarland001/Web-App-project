@@ -1,3 +1,67 @@
 #homePage{
     background-color: black;
 }
+
+.addBtn{
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+input{
+    margin:0;
+    border:none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+.header{
+    background-color: #f44336;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+.header:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.addBtn:hover{
+    background-color: #bbb;
+}
+#todoDiv{
+    background-color: white;
+    width: 25rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    padding: 5 rem;
+}
+ul{
+    list-style-type: none;
+}
+
+.todo::before{
+    content: "\2610";
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+.todos{
+    cursor: pointer;
+}
+.todo.active{
+    text-decoration: line-through;
+    color: #888;
+}
+.todo.active::before{
+    content: "\2611";
+
+}
