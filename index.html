@@ -7,27 +7,43 @@
 <meta charset = "utf-8">
 <title>Our cool website</title>
 <link rel="stylesheet" href= "Styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
-<body id="homePage">
+<body>
 
 <header>
-    <h1 style="color: white;">Header</h1>
+    <button id="toggle" class="toggle">
+        <i class="fa fa-bars "></i>
+
+    </button>
+
+    
+    <h1>Header</h1>
+    <button id="open" class="add-btn">Create task</button>
+
 </header>
 
 <nav>
+    <div class="menu">
+        <h2>Menu</h2>
+    </div>
+
     <ul>
-        <li><a href = "#">Home</a></li>
-        <li><a href = "#">About</a></li>
+        <li><a href ="#">Home</a></li>
+        <li><a href ="#">About</a></li>
     </ul>
+    
+
 </nav>
 
-<div id="uIDiv" class="header">
+<!-- <div id="uIDiv" class="header">
     <h2>My List</h2>
     <input type ="text" id="myInput" placeholder="Title....">
     <span onclick ="newElement()" class = "addBtn">Add</span>
-</div>
+    
+</div> -->
 
 <div id="todoDiv">
 
@@ -39,8 +55,52 @@
     <li class="todo">Task 5</li>
 
 </ul>
-<script src="Functionality.js" defer></script>
+
 </div>
+<div class="modal-container" id="modal">
+    <div id="modal1">
+        <button class="exit-btn" id="close">
+            <i class="fa fa-times"></i>
+        </button>
+        <div id="modal-header">
+            <h2>Create a new task</h2>
+        </div>
+        <div class="modal-paragraph">
+            <p>Fill out your task's name, dute date and priority</p>
+        </div>
+        <form  class="modal-form">
+            <div>
+                <label for ="Task">Task</label>
+                <input type="text" id="task" placeholder="Enter task" class="form-input">   
+            </div>
+            <div>
+                <label for ="Date">Date</label>
+                <input type="date" id="task" class="form-input">   
+            </div>
+            <div>
+                <label for ="time">Time</label>
+                <input type="time" id="time" class="form-input">   
+            </div>
+            
+            <div>
+                <label for="priority-select">Priority</label>
+
+                <select name="levels" id="levels" class="priority-input">
+                    <option value="">--Please select an option--</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">low</option>
+                </select>   
+            </div>
+                
+           
+            <input type="submit" value="Submit" class ="submit-btn">
+        </form>
+        
+    </div>
+</div>
+
+<script src="Functionality.js"></script>
 
 </body>
 
