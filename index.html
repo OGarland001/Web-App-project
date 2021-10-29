@@ -21,7 +21,7 @@
 
     
     <h1>Header</h1>
-    <button id="open" class="add-btn">Create task</button>
+    <button id="open" class="add-btn">Create Task</button>
 
 </header>
 
@@ -46,6 +46,7 @@
 </div> -->
 
 <div id="todoDiv">
+    
 
 <ul class ="todos" id="todos">
     <li class="todo">Task 1</li>
@@ -55,6 +56,8 @@
     <li class="todo">Task 5</li>
 
 </ul>
+
+
 
 </div>
 <div class="modal-container" id="modal">
@@ -68,14 +71,14 @@
         <div class="modal-paragraph">
             <p>Fill out your task's name, dute date and priority</p>
         </div>
-        <form  class="modal-form">
+        <form  class="modal-form" id="form-modal">
             <div>
                 <label for ="Task">Task</label>
-                <input type="text" id="task" placeholder="Enter task" class="form-input">   
+                <input type="text" id="text" placeholder="Enter task" class="form-input">   
             </div>
             <div>
                 <label for ="Date">Date</label>
-                <input type="date" id="task" class="form-input">   
+                <input type="date" id="date" class="form-input">   
             </div>
             <div>
                 <label for ="time">Time</label>
@@ -92,9 +95,11 @@
                     <option value="low">low</option>
                 </select>   
             </div>
+            
                 
            
-            <input type="submit" value="Submit" class ="submit-btn">
+            
+            <input type="button" onclick=addelement() value="Submit" id="sub" class ="submit-btn">
         </form>
         
     </div>
